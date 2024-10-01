@@ -5,7 +5,7 @@ def search_multiple_strings_in_file(file_name, list_of_strings):
     """Get line from the file along with line numbers, which contains any string from the list"""
     line_number = 0
     list_of_results = []
-    # Open the file in read only mode
+    # Open the file in read only modegh
     with open(file_name, 'r') as read_obj:
         # Read all lines in the file one by one
         for line in read_obj:
