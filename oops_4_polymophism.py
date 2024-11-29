@@ -10,7 +10,8 @@ Compile Time Polymorphism: Compile time polymorphism means compiler knows
 which function should be called when a polymorphic call is made. C++ supports 
 compiler time polymorphism by supporting features like templates, function overloading and default arguments.
 Run Time Polymorphism: Run time polymorphism is supported by virtual functions. 
-The idea is, virtual functions are called according to the type of object pointed or referred, not according to the type of pointer or reference. In other words, virtual functions are resolved late, at runtime.
+The idea is, virtual functions are called according to the type of object pointed or referred, not according to the 
+type of pointer or reference. In other words, virtual functions are resolved late, at runtime.
 
 
 
