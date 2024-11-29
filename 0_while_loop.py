@@ -1,4 +1,5 @@
-
+# while loop will use when we know stopping condition
+#forloop when we know how many time excute body
 #abs(number)
 
 def isHappy(n):
