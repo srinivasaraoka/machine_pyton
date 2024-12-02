@@ -82,6 +82,8 @@ Instances share everything that a class has, including the class methods. This m
 
 class Book:
   def __init__(self, title, author):
+    #If the value of a variable is varied from object to object, then such type of variables are called 
+    #instance variables.  
     self.title = title
     self.author = author
 
