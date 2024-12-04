@@ -1,6 +1,32 @@
 #n, m = map(int, input().split()) #importent remmeber
 #' '.join(map(str, group_A[word])))
 #return a==b
+'''
+Introduction to List
+Purpose of a List
+Iterating through a List
+List slicing, -ve indexing
+Internals of list
+List Operations
+Searching for an element
+In and count()
+Adding an element
+append()
+insert()
+Removing an element
+remove()
+pop()
+Merging two lists
++ operator
+extend()
+Ordering a list
+sort()
+reverse()
+Finding index of an element - index()
+List of lists
+Comparing list
+
+'''
 s='#!Hello, I am srinivas, I have two friends#! '
 print(s.split())
 #['Hello,', 'I', 'am', 'srinivas,', 'I', 'have', 'two', 'friends']
