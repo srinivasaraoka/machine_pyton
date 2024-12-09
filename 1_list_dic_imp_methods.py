@@ -113,6 +113,37 @@ for item in list_1:
     if type(item)== int:
         print(item)
 
+'''
+Extend vs. Append
+Extend and append are both list methods. They both add 
+elements to an existing list. The append() method adds one (1) 
+item to the end of the list, whereas the append() method does 
+not. The extend() method adds multiple items to the end of the 
+list. Below, we use the append() method to append numbers2
+to numbers1. You can see that the whole list of numbers2 has 
+been appended to numbers1 as one (1) item.
+numbers1 = [1, 2, 3]
+numbers2 = [4, 5, 6]
+# using append method
+numbers1.append(numbers2)
+print(numbers1)
+Output: 
+[1, 2, 3, [4, 5, 6]]
+When we use the extend() method, notice the difference from
+the append() method above. The extend() method takes the 
+elements in number2, and appends them to numbers1, one 
+item at a time, not as a whole list. See below:
+numbers1 = [1, 2, 3]
+numbers2 = [4, 5, 6]
+# using extend method
+numbers1.extend(numbers2)
+print(numbers1)
+Output: 
+[1, 2, 3, 4, 5, 6]
+
+'''
+
+
 
 #Dictionary
 #         
