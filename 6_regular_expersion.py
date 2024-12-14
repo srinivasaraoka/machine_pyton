@@ -100,7 +100,8 @@ Here, (?:cat|dog) groups "cat" or "dog" but does not capture the result. The s? 
 
 s1 = "A man, a plan, a canal: Panama"
 str1= re.sub(r"[^A-Za-z0-9]",'', s1)
-print(str1)
+print('#str1',str1)
+#str1 AmanaplanacanalPanama
 str2= str1.lower()
 print(str2)
 if str2== str2[::-1]:
