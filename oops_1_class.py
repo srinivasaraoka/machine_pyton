@@ -1,5 +1,4 @@
 '''
-
 Class
 A class is a blueprint for creating objects. 
 It defines a set of attributes (data) and methods (functions) that 
@@ -24,22 +23,16 @@ initial state.
 # rather than actions limited to a single object. Here's an example:
 #Class methods are created using the @classmethod decorator and take the cls argument, 
 # which refers to the class itself.
-
-
-
 The main difference between functions and methods is that functions are independent 
 and can be called on their own, while methods are associated with a class and can be 
 called only with its instance. This means that you can't call a method without having 
 the instance of a class where that method is defined.
 
-
 Identify the elements
-
 print(): func
 my_car.honk(): met
 
 '''
-
 
 class person:
     def __init__(self, name):
