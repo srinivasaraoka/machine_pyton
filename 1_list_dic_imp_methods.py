@@ -1,6 +1,8 @@
 #n, m = map(int, input().split()) #importent remmeber
 #' '.join(map(str, group_A[word])))
 #return a==b
+#vowel_indices = [i for i, char in enumerate(s_list) if char in vowels] if you want 
+# indexes please take enumerate
 '''
 Introduction to List
 Purpose of a List
@@ -171,7 +173,6 @@ nested_dic_2={
     3:'c'
 }
 print(nested_dic_2)
-
 
 #Q1) how to reverse the key and vlue in dictionary        
 '''
