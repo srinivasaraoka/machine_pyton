@@ -66,3 +66,25 @@ Dictionary keys are unique: If you add a duplicate key, the last value associate
 with that key will overwrite the previous value.
 
 '''
+'''  Auther: Srinivas '''
+def reverseVowels(s: str) -> str:
+    # Define a set of vowels
+    vowels = set("aeiouAEIOU")
+    
+    # Convert the string to a list for mutability
+    s_list = list(s)
+    
+    
+    vowel_ch= [x for x in s_list if x in vowels]
+    vowel_index=[i for i, x in enumerate(s_list) if x in vowels]
+    vowel_ch= vowel_ch[::-1]
+    print(vowel_ch, vowel_index)
+    for i, ch in enumerate(vowel_index):
+        print(i,ch)
+        s_list[ch]=vowel_ch[i]
+    print(s_list)
+
+# Example usage
+s = "IceCreAm"
+result = reverseVowels(s)
+print(result)  # Output: "AceCreIm"
