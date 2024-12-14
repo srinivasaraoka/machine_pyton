@@ -1,6 +1,6 @@
 '''bundling of data and methods that operate on that data within a single
 unit (class).
-True or False?
+
 
 You can use a private attribute within the class method.true
 
@@ -24,15 +24,14 @@ Enhanced Security: By restricting access to internal data, encapsulation helps
  protect the integrity of the data and prevents unintended interference.
 
 
-Accessing a private attribute directly from outside its class is generally discouraged in Python. However, Python 
-employs name mangling for private attributes, which means you can access them using a specific naming convention from 
-outside the class if necessary. 
+Accessing a private attribute directly from outside its class is generally discouraged 
+in Python. However, Python employs name mangling for private attributes, which means 
+you can access them using a specific naming convention from outside the class if 
+necessary. 
 #accesing using name mangling
 print(my_car._Car__odometer)
-Methods of objects we've looked at so far are called by an instance of a class. However, there are other types methods that 
-a class can have - class and static methods.
-
-
+Methods of objects we've looked at so far are called by an instance of a class. However, 
+there are other types methods that a class can have - class and static methods.
 
 
 '''
