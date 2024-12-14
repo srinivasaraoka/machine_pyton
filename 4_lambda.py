@@ -1,6 +1,3 @@
-
-
-
 '''
 Sometimes we can declare a function without any name,such type of 
 nameless functions  are called anonymous functions or lambda functions.
