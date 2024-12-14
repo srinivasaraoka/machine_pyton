@@ -10,6 +10,19 @@ within a single process. A thread is the smallest unit of a process, and
 multithreading allows a program to perform multiple tasks simultaneously, 
 improving efficiency, especially in I/O-bound applications like network requests, 
 file handling, and more.
+
+thread1 = threading.Thread(target=print_numbers, args=('jai sri ram',))
+
+thread1.start()
+thread2.start()
+l= enumerate()
+print(l)
+for t in l:
+    print("t.name is",t.name, thread1.is_alive(), thread2.is_alive())
+# Wait for both threads to complete
+thread1.join()
+thread2.join() #
+
 Multithreading in Python is a programming technique that allows
 multiple threads (smaller units of a process) to run concurrently 
 within a single process. Each thread operates independently but 
