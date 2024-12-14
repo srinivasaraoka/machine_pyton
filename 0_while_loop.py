@@ -1,10 +1,10 @@
+#Auther "Srinivas"
 # while loop will use when we know stopping condition
 #forloop when we know how many time excute body
 #abs(number)
 #shifted = s[i:] + s[:i]  # Shift the string
 #vowel_indices = [i for i, char in enumerate(s_list) if char in vowels] if you want 
 # indexes please take enumerate 
-
 
 def isHappy(n):
     seen_numbers = set()  # Keep track of numbers we've seen to detect loops
