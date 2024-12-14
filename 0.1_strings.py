@@ -6,6 +6,7 @@ str.isupper()
 str.islower()
 str.isalpha()
 str1.remove = str.replace("-","") #delete pariticular string
+shifted = s[i:] + s[:i]  # Shift the string
 list1= list(str1) if you want get ele by ele in string, please convert the string to list
 '''
 str1='I love python'
@@ -13,9 +14,7 @@ list1=list(str1)
 print(list1)
 list2= list(map(str, str1.split()))
 print(list2)
-
 str1='abcd'
-
 print(str1.capitalize())
 word='USA'
 def detectCapitalUse(word: str) -> bool:
