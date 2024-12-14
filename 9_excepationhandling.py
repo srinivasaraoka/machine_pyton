@@ -28,18 +28,15 @@ try:
     str1= len(10)
     print(str1)
 except TypeError:
-    print("error")
+    print("#error")
 finally:
-    print("sytex error")   
-print("hi")
+    print("#sytex error")   
+print("#hi")
+#error
+#sytex error
+#hi
 
-try:
-    str1= len(10)
-    print(str1)
-except ValueError as e:
-    print("error1",e)
-finally:
-    print("sytex error2")   
+   
 '''            
 def read_file(filename):
     try:
@@ -82,3 +79,16 @@ try:
     check_value(-5)
 except ValueError as e:
     print(e)
+
+
+
+try:
+    str1= len(10)
+    print(str1)
+except ValueError as e:
+    print("error1",e)
+  
+finally:
+    print("sytex error2")   
+#sytex error2
+print("hi2") # must declare TypeError otherwise this print wont execute
