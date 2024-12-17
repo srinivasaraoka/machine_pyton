@@ -148,7 +148,7 @@ Output:
 
 
 #Dictionary
-#         
+#update(),get()         
 dic={'a':[1,2,3],'b':[4,5,6]}
 print('# dic[b][1]=, dic[b]',dic['b'][1], dic['b'])
 # dic[b][1]=, dic[b] 5 [4, 5, 6]
