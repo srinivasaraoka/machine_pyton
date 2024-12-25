@@ -17,6 +17,12 @@ print(list2)
 str1='abcd'
 print(str1.capitalize())
 word='USA'
+s='#!Hello, I am srinivas, I have two friends#! '
+print(s.split())
+#['Hello,', 'I', 'am', 'srinivas,', 'I', 'have', 'two', 'friends']
+print(s.strip('#! '))
+#Hello, I am srinivas, I have two friends
+
 def detectCapitalUse(word: str) -> bool:
     # Case 1: All letters are capitals
     if word.isupper():
