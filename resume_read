@@ -1,0 +1,16 @@
+ 
+ 1. Post-Silicon Validation: Solid background in post-silicon validation. Successfully contributed to the testing and validation of WLAN chipsets to ensure they comply with IEEE standards and meet performance requirements. Worked on 2.4GHz/5GHz/6GHz bands.
+
+ 2. Test Script Development: Development and execution of scripts across PVT (Process, Voltage, and Temperature) using test frameworks like Staple(Python-based) and MFGc to validate the driver/FW. 
+
+ 3. Test Parameters: Specialized in measuring EVM, TPC error, Sensitivity, Spectrum mask, TCP/UDP Throughput, Active/Sleep/Calibration Current to validate for IEEE compliance and to ensure performance.Conducted sanity/regression/functionality/stress testing as well as feature tests including ACI, Adaptivity, and Antenna Diversity.
+
+ 4. Testing Standards: WLAN standards, including 802.11 a, b, g, n, ac, and ax (SU &OFDMA). Tested the chips in PCIe, SDIO and USB configurations.
+
+ 5. Test Setup/Instruments: Proficient in setting up test environments and possess fast debugging skills to ensure efficient and accurate testing processes. Hands-on experience with RF equipment including Litepoint, Signal generator, Power meter, Attenuator, Power supply, Power Analyzer, Multimeter, Temperature chamber, Spectrum Analyzer, Network Power Controller, CMW270. Experience in using the devices and instruments in compliance with the ESD standards.
+
+ 6. MIMO and RSDB Chips: Worked on 1X1, 2X2 MIMO, and RSDB chips, with expertise in PCIe, SDIO, and USB interfaces. Worked on low-power solutions.
+
+ 7. Bench Testing and Automation: Conducted bench testing and debugging of WLAN solutions through manual test case execution. Worked on modifying and updating the Python code for test flow changes. Worked on GIT.
+
+ 8. Teamwork/Collaboration: Collaboration with cross-functional teams (Systems/Software/Microcode) to optimize RF performance and fix issues. Worked with automation teams to develop a Multi-DUT parallel test environment, reducing test duration and enhancing efficiency. Assisted in bringing up customer devices for compatibility testing and validation. Mentored junior test engineers on techniques and methodologies. Utilized bug-tracking tools like JIRA and documentation tools like Confluence.
