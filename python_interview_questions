@@ -19,20 +19,20 @@ def my_decorator(func):
 say_hello()
 In this case, my_decorator wraps the say_hello function to print messages before and after the original function is called.
 
-3. What is the difference between deep copy and shallow copy in Python?
+3. What is the difference between deep  and shallow  in Python?
 Answer:
-oA shallow copy creates a new object, but inserts references into the new object instead of copying the objects themselves. Therefore, changes to mutable elements in the original object will affect the shallow copy.
-oA deep copy creates a completely independent object and recursively copies all nested objects, meaning that changes to the original object won't affect the deep copy.
+oA shallow  creates a new object, but inserts references into the new object instead of ing the objects themselves. Therefore, changes to mutable elements in the original object will affect the shallow .
+oA deep  creates a completely independent object and recursively copies all nested objects, meaning that changes to the original object won't affect the deep .
 Example:
 python
 
-import copy
+import 
 
 original = [[1, 2, 3], [4, 5, 6]]
-shallow = copy.copy(original)
-deep = copy.deepcopy(original)
+shallow = .(original)
+deep = .deep(original)
 
-original[0][0] = 10print(shallow)  # Changes affect shallow copyprint(deep)     # Deep copy remains unaffected
+original[0][0] = 10print(shallow)  # Changes affect shallow print(deep)     # Deep  remains unaffected
 
 4. What is the yield keyword in Python, and how does it differ from return?
 Answer: The yield keyword is used in generator functions to produce a series of values lazily, instead of returning all values at once. When the function is called, it returns an iterator object that can be iterated over.
@@ -371,8 +371,8 @@ print(Person("John"))  # Person(name='John', age=30)
 Problem: Given an array of integers containing numbers from 1 to N with one missing, find the missing number.
 
 python
-Copy
-Edit
+
+
 def find_missing_number(arr, n):
     expected_sum = n * (n + 1) // 2
     actual_sum = sum(arr)
@@ -386,8 +386,8 @@ print(find_missing_number(arr, n))  # Output: 3
 Problem: Write a function to check if a string contains valid parentheses.
 
 python
-Copy
-Edit
+
+
 def is_valid_parenthesis(s):
     stack = []
     mapping = {')': '(', '}': '{', ']': '['}
@@ -407,8 +407,8 @@ print(is_valid_parenthesis("({[})"))   # Output: False
 Problem: Find the length of the longest substring without repeating characters.
 
 python
-Copy
-Edit
+
+
 def length_of_longest_substring(s):
     char_set = set()
     left = 0
@@ -427,8 +427,8 @@ print(length_of_longest_substring("abcabcbb"))  # Output: 3
 Problem: Given an array and a target sum, find two numbers that add up to the target.
 
 python
-Copy
-Edit
+
+
 def find_pair(nums, target):
     seen = {}
     for i, num in enumerate(nums):
@@ -444,8 +444,8 @@ print(find_pair([2, 7, 11, 15], 9))  # Output: [0, 1]
 Problem: Find the first character in a string that does not repeat.
 
 python
-Copy
-Edit
+
+
 def first_non_repeating_char(s):
     freq = {}
     for char in s:
@@ -461,8 +461,8 @@ print(first_non_repeating_char("swiss"))  # Output: 'w'
 Problem: Print numbers from 1 to N. For multiples of 3, print "Fizz"; for multiples of 5, print "Buzz"; and for multiples of both, print "FizzBuzz".
 
 python
-Copy
-Edit
+
+
 def fizz_buzz(n):
     for i in range(1, n + 1):
         if i % 3 == 0 and i % 5 == 0:
@@ -480,8 +480,8 @@ fizz_buzz(15)
 Problem: Find all starting indices of substring(s) in a string that are anagrams of a given word.
 
 python
-Copy
-Edit
+
+
 from collections import Counter
 
 def find_anagrams(s, p):
@@ -508,16 +508,16 @@ Would you like additional logical problems or explanations for these?
 
 You said:
 yes
-ChatGPT said:
-ChatGPT
+ said:
+
 Here are additional Python logical problems for advanced-level coding interviews:
 
 8. Merge Intervals
 Problem: Given a list of intervals, merge all overlapping intervals.
 
 python
-Copy
-Edit
+
+
 def merge_intervals(intervals):
     intervals.sort(key=lambda x: x[0])
     merged = []
@@ -534,8 +534,8 @@ print(merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]))  # Output: [[1, 6], 
 Problem: Rotate a 2D matrix 90 degrees clockwise.
 
 python
-Copy
-Edit
+
+
 def rotate_matrix(matrix):
     n = len(matrix)
     for i in range(n // 2):
@@ -559,8 +559,8 @@ print(rotate_matrix(matrix))
 Problem: Find the element that appears more than n/2 times in an array, where n is the size of the array.
 
 python
-Copy
-Edit
+
+
 def majority_element(nums):
     count = 0
     candidate = None
@@ -576,8 +576,8 @@ print(majority_element([3, 3, 4, 2, 3, 3, 3]))  # Output: 3
 Problem: Print the nodes of a binary tree level by level.
 
 python
-Copy
-Edit
+
+
 from collections import deque
 
 class TreeNode:
@@ -603,63 +603,404 @@ def level_order_traversal(root):
         result.append(level)
     return result
 
-# Example
-root = TreeNode(1, TreeNode(2), TreeNode(3, TreeNode(4), TreeNode(5)))
-print(level_order_traversal(root))  # Output: [[1], [2, 3], [4, 5]]
-12. Trapping Rainwater
-Problem: Given an array representing elevation heights, calculate how much rainwater can be trapped.
+1. Dynamic VLAN Assignment Validation
+Question:
+You are given a dictionary that maps VLANs to connected devices:
 
 python
-Copy
-Edit
-def trap_rainwater(height):
-    if not height:
-        return 0
-    left, right = 0, len(height) - 1
-    left_max, right_max = height[left], height[right]
-    water = 0
-    while left < right:
-        if left_max < right_max:
-            left += 1
-            left_max = max(left_max, height[left])
-            water += max(0, left_max - height[left])
-        else:
-            right -= 1
-            right_max = max(right_max, height[right])
-            water += max(0, right_max - height[right])
-    return water
 
-# Example
-print(trap_rainwater([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))  # Output: 6
-13. Word Search in a 2D Grid
-Problem: Check if a word exists in a 2D grid. Words can be constructed from adjacent cells horizontally or vertically.
+
+vlans = {
+    "95": ["AP1", "AP2"],
+    "100": ["AP3", "AP4"],
+    "200": ["AP5"]
+}
+Write a function to validate whether a given AP is assigned to the correct VLAN. If it is incorrect, log an error message with the expected and actual VLAN IDs.
+Example Input:
 
 python
-Copy
-Edit
-def exist(board, word):
-    def dfs(i, j, k):
-        if k == len(word):
-            return True
-        if i < 0 or i >= len(board) or j < 0 or j >= len(board[0]) or board[i][j] != word[k]:
-            return False
-        temp = board[i][j]
-        board[i][j] = "#"
-        res = dfs(i + 1, j, k + 1) or dfs(i - 1, j, k + 1) or dfs(i, j + 1, k + 1) or dfs(i, j - 1, k + 1)
-        board[i][j] = temp
-        return res
 
-    for i in range(len(board)):
-        for j in range(len(board[0])):
-            if dfs(i, j, 0):
-                return True
-    return False
 
-# Example
-board = [
-    ["A", "B", "C", "E"],
-    ["S", "F", "C", "S"],
-    ["A", "D", "E", "E"]
+validate_ap_vlan("AP1", "100")
+Output:
+Error: AP1 is assigned to VLAN 100, but expected VLAN 95.
+
+2. Beacon Frame Rate Analyzer
+Question:
+You are provided a list of beacon intervals (in ms) collected from an AP:
+
+python
+
+
+intervals = [100, 102, 105, 100, 110, 98, 99]
+Write a function to calculate:
+
+The average beacon interval.
+Detect anomalies (intervals that deviate by more than 5% from the average).
+3. Client Connection Timing
+Question:
+Write a Python function to calculate the total connection time for a WiFi client based on the following log events:
+
+python
+
+
+logs = [
+    {"timestamp": "10:00:00", "event": "connect"},
+    {"timestamp": "10:30:00", "event": "disconnect"},
+    {"timestamp": "11:00:00", "event": "connect"},
+    {"timestamp": "11:15:00", "event": "disconnect"},
 ]
-print(exist(board, "ABCCED"))  # Output: True
+Output:
+Total connection time: 45 minutes
+
+4. WiFi Channel Overlap Detection
+Question:
+Given a list of APs with their operating channels, write a function to identify overlapping channels.
+
+python
+
+
+aps = [
+    {"name": "AP1", "channel": 1},
+    {"name": "AP2", "channel": 6},
+    {"name": "AP3", "channel": 3},
+    {"name": "AP4", "channel": 11}
+]
+Output:
+Overlap detected between AP1 and AP3.
+
+5. MAC Address Validation
+Question:
+Write a function to validate whether a given MAC address belongs to a Cisco device. Assume Cisco's OUI (Organizationally Unique Identifier) starts with 00:1A:1E.
+
+python
+
+
+Input: validate_mac("00:1A:1E:12:34:56")
+Output: True
+6. Packet Loss Detection
+Question:
+You are given a list of ping results:
+
+python
+
+
+pings = ["64 bytes from 192.168.1.1: icmp_seq=1 ttl=64 time=1.05 ms",
+         "Request timed out",
+         "64 bytes from 192.168.1.1: icmp_seq=3 ttl=64 time=1.10 ms",
+         "Request timed out",
+         "Request timed out"]
+Write a Python function to calculate the packet loss percentage.
+
+7. AP Load Balancing
+Question:
+Given the following client connections to APs:
+
+python
+
+
+connections = {
+    "AP1": 10,
+    "AP2": 25,
+    "AP3": 40
+}
+Write a function to redistribute clients evenly across the APs and return the new distribution.
+
+8. Frame Analysis
+Question:
+Write a function to decode the duration field from a raw 802.11 frame.
+Input: A hex string representing the duration field: "001E"
+Output: Duration in microseconds.
+
+9. Test Case Prioritization
+Question:
+You have a list of test cases with execution times and priorities:
+
+python
+
+
+test_cases = [
+    {"name": "Test1", "time": 10, "priority": 1},
+    {"name": "Test2", "time": 5, "priority": 2},
+    {"name": "Test3", "time": 8, "priority": 1},
+]
+Write a function to schedule the test cases, prioritizing by highest priority and shortest time.
+
+10. Channel Utilization Report
+Question:
+Write a Python function to parse channel utilization data and generate a report.
+Input:
+
+python
+
+
+utilization = [
+    {"channel": 1, "utilization": 50},
+    {"channel": 6, "utilization": 90},
+    {"channel": 11, "utilization": 70}
+]
+Output:
+Channel 6 has the highest utilization at 90%.
+
+11. WiFi Signal Strength
+Question:
+You are given signal strength data (in dBm) collected over time:
+
+python
+
+
+signal_strengths = [-70, -65, -80, -90, -75]
+Write a function to:
+
+Calculate the average signal strength.
+Identify the weakest signal.
+12. Device Discovery Automation
+Question:
+Write a Python script to simulate the discovery of WiFi devices in a network and store their details (SSID, MAC, Signal Strength) in a JSON file.
+
+These questions are logical, scenario-based, and directly related to WiFi QA automation. Let me know if you'd like detailed solutions or more questions like these! 😊
+
+
+
+
+
+
+
+You said:
+super, give me solutions also
+ said:
+
+Let’s tackle these WiFi automation-related logical Python questions one by one with solutions. Here's the first batch:
+
+1. Dynamic VLAN Assignment Validation
+python
+
+
+vlans = {
+    "95": ["AP1", "AP2"],
+    "100": ["AP3", "AP4"],
+    "200": ["AP5"]
+}
+
+def validate_ap_vlan(ap_name, actual_vlan):
+    for vlan, devices in vlans.items():
+        if ap_name in devices:
+            if vlan != actual_vlan:
+                print(f"Error: {ap_name} is assigned to VLAN {actual_vlan}, but expected VLAN {vlan}.")
+            else:
+                print(f"{ap_name} is correctly assigned to VLAN {vlan}.")
+            return
+    print(f"Error: {ap_name} not found in any VLAN mapping.")
+
+# Test case
+validate_ap_vlan("AP1", "100")  # Error: AP1 is assigned to VLAN 100, but expected VLAN 95.
+validate_ap_vlan("AP3", "100")  # AP3 is correctly assigned to VLAN 100.
+2. Beacon Frame Rate Analyzer
+python
+
+
+intervals = [100, 102, 105, 100, 110, 98, 99]
+
+def analyze_beacon_intervals(intervals):
+    average = sum(intervals) / len(intervals)
+    anomalies = [interval for interval in intervals if abs(interval - average) > (0.05 * average)]
+    print(f"Average Beacon Interval: {average:.2f} ms")
+    print(f"Anomalies: {anomalies}")
+
+# Test case
+analyze_beacon_intervals(intervals)
+# Average: ~102.0 ms, Anomalies: [110]
+3. Client Connection Timing
+python
+
+
+from datetime import datetime
+
+logs = [
+    {"timestamp": "10:00:00", "event": "connect"},
+    {"timestamp": "10:30:00", "event": "disconnect"},
+    {"timestamp": "11:00:00", "event": "connect"},
+    {"timestamp": "11:15:00", "event": "disconnect"},
+]
+
+def calculate_connection_time(logs):
+    total_minutes = 0
+    for i in range(0, len(logs), 2):
+        start_time = datetime.strptime(logs[i]["timestamp"], "%H:%M:%S")
+        end_time = datetime.strptime(logs[i + 1]["timestamp"], "%H:%M:%S")
+        total_minutes += int((end_time - start_time).total_seconds() / 60)
+    print(f"Total connection time: {total_minutes} minutes")
+
+# Test case
+calculate_connection_time(logs)  # Output: Total connection time: 45 minutes
+4. WiFi Channel Overlap Detection
+python
+
+
+aps = [
+    {"name": "AP1", "channel": 1},
+    {"name": "AP2", "channel": 6},
+    {"name": "AP3", "channel": 3},
+    {"name": "AP4", "channel": 11}
+]
+
+def detect_channel_overlap(aps):
+    overlaps = []
+    for i in range(len(aps)):
+        for j in range(i + 1, len(aps)):
+            if abs(aps[i]["channel"] - aps[j]["channel"]) < 5:  # Overlap if channels are <5 apart
+                overlaps.append((aps[i]["name"], aps[j]["name"]))
+    if overlaps:
+        print(f"Overlap detected between: {overlaps}")
+    else:
+        print("No overlaps detected.")
+
+# Test case
+detect_channel_overlap(aps)  # Overlap detected between: [('AP1', 'AP3')]
+5. MAC Address Validation
+python
+
+
+def validate_mac(mac):
+    return mac.upper().startswith("00:1A:1E")
+
+# Test case
+print(validate_mac("00:1A:1E:12:34:56"))  # Output: True
+print(validate_mac("00:1B:2C:12:34:56"))  # Output: False
+6. Packet Loss Detection
+python
+
+
+pings = [
+    "64 bytes from 192.168.1.1: icmp_seq=1 ttl=64 time=1.05 ms",
+    "Request timed out",
+    "64 bytes from 192.168.1.1: icmp_seq=3 ttl=64 time=1.10 ms",
+    "Request timed out",
+    "Request timed out"
+]
+
+def calculate_packet_loss(pings):
+    total_packets = len(pings)
+    lost_packets = pings.count("Request timed out")
+    loss_percentage = (lost_packets / total_packets) * 100
+    print(f"Packet Loss: {loss_percentage:.2f}%")
+
+# Test case
+calculate_packet_loss(pings)  # Output: Packet Loss: 60.00%
+7. AP Load Balancing
+python
+
+
+connections = {
+    "AP1": 10,
+    "AP2": 25,
+    "AP3": 40
+}
+
+def balance_load(connections):
+    total_clients = sum(connections.values())
+    num_aps = len(connections)
+    avg_clients = total_clients // num_aps
+    extra_clients = total_clients % num_aps
+
+    balanced = {}
+    for i, (ap, clients) in enumerate(connections.items()):
+        balanced[ap] = avg_clients + (1 if i < extra_clients else 0)
+    return balanced
+
+# Test case
+print(balance_load(connections))
+# Output: {'AP1': 25, 'AP2': 25, 'AP3': 25}
+8. Frame Analysis
+python
+
+
+def decode_duration(hex_duration):
+    duration = int(hex_duration, 16)
+    print(f"Duration: {duration} microseconds")
+
+# Test case
+decode_duration("001E")  # Output: Duration: 30 microseconds
+Would you like me to continue with the remaining scenarios or dive deeper into any of the solutions above? 😊
+
+
+
+
+
+
+
+You said:
+give me quation and answer at time
+ said:
+
+Sure, here’s a set of logical Python interview questions with their answers provided immediately after each question.
+
+1. Validate IPv4 Address
+Question: Write a function to validate if a given string is a valid IPv4 address.
+
+python
+
+
+def is_valid_ipv4(ip):
+    parts = ip.split(".")
+    if len(parts) != 4:
+        return False
+    for part in parts:
+        if not part.isdigit() or not 0 <= int(part) <= 255:
+            return False
+    return True
+
+# Example Usage
+print(is_valid_ipv4("192.168.1.1"))  # Output: True
+print(is_valid_ipv4("256.100.50.25"))  # Output: False
+2. Reverse a String Without Using Built-In Methods
+Question: Write a function to reverse a string without using Python's built-in slicing.
+
+python
+
+
+def reverse_string(s):
+    reversed_str = ""
+    for char in s:
+        reversed_str = char + reversed_str
+    return reversed_str
+
+# Example Usage
+print(reverse_string("WiFi"))  # Output: "iFiW"
+3. Find the First Non-Repeating Character
+Question: Write a function to find the first non-repeating character in a string.
+
+python
+
+
+def first_non_repeating(s):
+    freq = {}
+    for char in s:
+        freq[char] = freq.get(char, 0) + 1
+    for char in s:
+        if freq[char] == 1:
+            return char
+    return None
+
+# Example Usage
+print(first_non_repeating("swiss"))  # Output: "w"
+4. Check Palindrome Without Reversing
+Question: Write a function to check if a string is a palindrome without reversing it.
+
+python
+
+
+def is_palindrome(s):
+    left, right = 0, len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
+
+# Example Usage
+print(is_palindrome("radar"))  # Output: True
+print(is_palindrome("python"))  # Output: False
+
 
