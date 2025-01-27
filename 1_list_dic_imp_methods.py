@@ -148,7 +148,8 @@ Output:
 
 
 #Dictionary
-#update(),get()         
+#update(),get()   
+#https://aigents.co/learn/merging-dictionaries-in-python
 dic={'a':[1,2,3],'b':[4,5,6]}
 print('# dic[b][1]=, dic[b]',dic['b'][1], dic['b'])
 # dic[b][1]=, dic[b] 5 [4, 5, 6]
@@ -227,3 +228,46 @@ def luckyNumbers(matrix):
     return list(row_mins & col_maxs)
 
 print(luckyNumbers(matrix))
+
+'''
+Simplify Python Dictionary Merging!
+
+
+Why choose | over ** or .update()?
+
+
+When merging dictionaries,
+the | operator (introduced in Python 3.9)
+is usually the best approach.
+
+
+Here's why:
+
+
+➟ Concise & Readable:
+
+▸ Forget about clunky syntax. 
+
+▸ merged = dict1 | dict2 is clean and intuitive.
+
+
+
+➟ Non-Destructive:
+
+▸ Unlike .update(), which modifies the first dictionary,
+| creates a new dictionary, 
+leaving your original data untouched.
+
+
+
+➟ No Workarounds:
+
+▸ ** unpacking works but adds verbosity.
+
+
+
+What's your go-to method for 
+merging dictionaries in Python?
+
+'''
+
