@@ -1,8 +1,6 @@
-
-
-
 tupple1=()
 tupple=(1,2,3,4,4)
+#statdareds values , pi value
 '''
 In Python, a tuple  that is used to store an ordered 
 collection of items. Tuples are similar to lists, but they have some important 
@@ -91,3 +89,12 @@ if __name__ == "__main__":
     list_students_sorted_by_average_grade()
 
 #sorted_students = sorted(student_records, key=lambda student: sum(student[3]) / len(student[3]), reverse=True)
+
+'''
+Reason | Details
+Faster | Tuples are faster than lists.
+Data integrity | Prevent accidental modification.
+Can be dictionary keys | Lists cannot be keys, tuples can.
+Safer for constants | Good for storing fixed, related data.
+
+'''

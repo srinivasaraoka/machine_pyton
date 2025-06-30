@@ -19,6 +19,7 @@ square= [x*x for x in z]
 print("#", square)
 # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
+#if you don't use else, use below one 
 even_squres= [x*x for x in z if x%2==0]
 print("#",even_squres)
 # [0, 4, 16, 36, 64]

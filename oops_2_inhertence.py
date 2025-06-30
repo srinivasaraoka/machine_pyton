@@ -37,8 +37,18 @@ my_dog = Dog("Jax", "Bulldog", 5)
 # Calling the overridden sound method
 my_dog.sound()
 
-
 '''
+import logger
+import logging
+import logging
+import logger
+logging.basicConfig(level=logging.INFO)
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logging.info("This is an info message")  
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logger = logging.getLogger("custom_logger")
 class Animal:
     def __init__(self, name):
         self.name= name
@@ -102,4 +112,21 @@ class B(A):
 
 d = B()
 d.display()  
+
+#Diamond problem
+
+class A:
+    def display(self):
+        print("this is class A")
+class B(A):
+    def display(self):
+        logger.info("this is class B bbbbbbbbbbbb")
+class C(A):
+    def display(self):
+        logger.info("this is class C") 
+class D(B,C):
+    pass
+objd=D()
+objd.display()  
+logger.info(D.mro())                       
          

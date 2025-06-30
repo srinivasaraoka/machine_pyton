@@ -1,8 +1,8 @@
 '''
+sama interface to behave differently based on the object.
  
-It enables a single function or operator to work in different ways based on the 
-type of object it is operating on. Polymorphism facilitates flexibility and the 
-ability to handle different data types or objects using a unified interface.
+Polymorphism: ability of an object to take on different forms or behaviors based on 
+the context.􏰀
 
 Polymorphism means that some code or operations or objects behave differently 
 in different contexts. In C++, following features support polymorphism.
@@ -13,12 +13,12 @@ Run Time Polymorphism: Run time polymorphism is supported by virtual functions.
 The idea is, virtual functions are called according to the type of object pointed or referred, not according to the 
 type of pointer or reference. In other words, virtual functions are resolved late, at runtime.
 
-
-
 Key Aspects of Polymorphism
+
 Method Overriding: Subclasses can provide specific implementations of methods that 
 are already defined in their parent classes. This allows the same method name to be 
 used in different contexts.
+
 Method Overloading: This allows multiple methods with the same name but different 
 parameters to be defined in the same class. (Note: Python does not support method 
 overloading in the traditional sense as seen in languages like Java, but you can 
@@ -32,6 +32,11 @@ Run-time polymorphism (method overriding): This is where Python shines by allowi
 Duck Typing: Python uses duck typing, which means that if an object behaves like a 
 certain type (i.e., it implements the expected methods and properties), it can be 
 used as that type. This allows for more flexible and less tightly coupled code.
+
+It enables a single function or operator to work in different ways based on the 
+type of object it is operating on. Polymorphism facilitates flexibility and the 
+ability to handle different data types or objects using a unified interface.
+
 
 '''
 
@@ -50,8 +55,6 @@ dogobj= Dog()
 catobj= Cat()
 makessound(dogobj)
 makessound(catobj)  
-
-
 
 
 '''Method Overloading (Pythonic Approach)
@@ -210,3 +213,15 @@ class Demo2(Demo1):
 d=Demo2()
 d.dispaly()        
 
+
+'''
+
+Key Differences
+Feature                 	Method Overriding	                                        Method Overloading
+Definition               	Redefining a method from the parent class in the subclass	Defining multiple methods with the same name but different parameters in the same class
+Concept                 	Inheritance-based	                                        Same-class method differentiation
+Polymorphism             	Supports runtime polymorphism	                            Supports compile-time polymorphism (not native in Python)
+Number of Methods        	One method, redefined in the subclass                    	Multiple methods with the same name but different arguments
+Example Use Case         	Changing behavior of a parent class method in a subclass	Providing multiple ways to perform a similar operation
+
+'''

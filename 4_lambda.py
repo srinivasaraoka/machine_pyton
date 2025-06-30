@@ -2,18 +2,24 @@
 Sometimes we can declare a function without any name,such type of 
 nameless functions  are called anonymous functions or lambda functions.
 
-
 Syntax of lambda Function: lambda argument_list:expression
 lambda n:n*n
 
 Note: By using Lambda Functions we can write very concise code so that 
 readability of the program will be improved.
 
-
 A lambda function is an anonymous function defined 
 using the lambda keyword. It is typically used for short, one-line functions.
 
-*we can not add for loop in lambda 
+*we can not add for loop in lambda(map) 
+*we can not add if loop in lambda(filter)
+DO: USE LAMBDA FOR SIMPLE OPERATIONS.
+DON'T: don't USE LAMBDA FOR COMPLEX LOGIC
+(BECOMES HARD TO READ)
+LIMITATIONS:
+ONLY ONE EXPRESSION ALLOWED.
+NO MULTIPLE STATEMENTS OR
+ANNOTATIONS.
 '''
 import sys
 
@@ -31,6 +37,7 @@ print(doubler(5))
 print(tripler(5))
 
 s=lambda a,b:a if a>b else b 
+print("s is",s(2,3))
 
 student_records=[(1, 'Charlie', 19, (90, 95, 88)), (2, 'Alice', 20, (185, 90, 92)), (3, 'Bob Smith', 21, (78, 80, 85, 88))]
 sorted_students = sorted(student_records, key=lambda student: sum(student[3]) / len(student[3]), reverse=True)
@@ -38,11 +45,10 @@ sorted_students = sorted(student_records, key=lambda student: sum(student[3]) / 
 
 key= lambda student: sum(student[3]) / len(student[3])
 for student_record in student_records:
-    
     print(key(student_record))
 
 
-#map
+#map(# it's excute like for loop in side expersion)
 '''
 #map(function, iterable)
 #The map function takes two arguments - an iterable and… function
@@ -63,6 +69,11 @@ numbers = [1, 2, 3]
 doubled = list(map(lambda x: x*2, numbers))
 
 print(doubled) 
+
+names = ['alice', 'BOB', 'ChArLiE']
+formatted = list(map(str.title, names))  # ['Alice', 'Bob', 'Charlie']
+print(formatted)
+
 #List of names in various cases
 names = ["alice", "bob", "CHARLIE", "dEborah"]
 
@@ -79,19 +90,18 @@ capitalized = list(capitalized)
 print("#caplitalized is ",capitalized)
 #caplitalized is  ['Alice', 'Bob', 'Charlie', 'Deborah']
 
-
-
 #The code below has a mistake. Can you fix it?
 
 exam_scores = [85, 62, 95, 40, 78]
 def is_passing(score):
   return score >= 70
 
-status = list(map(exam_scores,is_passing))
+# status = list(map(exam_scores,is_passing)) # Error: map() takes a function as the first argument
+status = list(map(is_passing, exam_scores))
 
 print(status)
 
-#filetr
+#filetr(*it will excute expersion like "if condition")
 '''
 The filter() function, just like the map() function, 
 takes in a function and an iterable as arguments. The key purpose of filter() is to 
@@ -100,12 +110,16 @@ and return only those for which the function evaluates to True.
 
 This code filters and returns products with names 4 characters long.
 '''
+lst=[1,2,3,4]
+eve= filter(lambda x: x%2==0, lst)
+print(list(eve))
 products = ["Table", "Sofa", "Cushion", "Bookshelf", "Vase"]
 
 # Filters products with name length equal to 4
 filtered_prod = list(filter(lambda name: len(name) == 4, products))
 
-print(filtered_prod)
+print("fliterd_prod",filtered_prod)
+
 #transforms the items of an iterable:map()
 #returns items that meet a condition:fileter()
 # The map() function applies a specified function to every element in an iterable
@@ -118,7 +132,7 @@ print(filtered_prod)
 
 
 # Read all the input at once
-input_data = sys.stdin.read().splitlines()
+input_data = 1#sys.stdin.read().splitlines()
 
 # Extract the first line to get `n` (number of students) and `x` (number of subjects)
 n_stu, x_sub = map(int, input_data[0].split())
@@ -150,11 +164,11 @@ print(cleaned_answers)
 
 #Write a map function that adds 10 to each item in the iterable scores
 
-map(lambda x: x+10,scroes)
+#map(lambda x: x+10,scroes)
 
 #Complete the code to filter out values from the ages list that are less than 30
 
-filter(lambda age:age< 30, ages)
+#filter(lambda age:age< 30, ages)
 
   
 

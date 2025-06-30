@@ -1,4 +1,11 @@
-'''  '''
+'''
+Abstraction: representing essential features and hiding unnecessary details to 
+simplify the complexity.(sunil nareina bowling)
+Abstraction is about simplifying the interface, hiding complex details, and 
+allowing the user to interact with the object without knowing the internal 
+mechanics. It is implemented using abstract classes or methods.
+
+'''
 
 class Student:
     def __init__(self, name, rollnumber, age):

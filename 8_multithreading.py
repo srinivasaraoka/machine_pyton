@@ -43,14 +43,15 @@ cores. However, Python's Global Interpreter Lock (GIL) affects
 parallel execution in CPython (the standard Python implementation), 
 limiting true parallelism for CPU-bound tasks.
 
-
-
 Key Concepts of Multithreading:
 Thread: A thread is a lightweight process, and multiple threads within a single process 
 share the same memory space.
+
 Concurrency: The concept of executing multiple tasks (threads) simultaneously, giving 
-the illusion that they're running at the same time. In Python, due to the Global Interpreter Lock (GIL), 
-only one thread can execute Python bytecode at a time, but I/O-bound tasks can benefit from threading.
+the illusion that they're running at the same time.
+In Python, due to the Global Interpreter Lock (GIL), 
+only one thread can execute Python bytecode at a time, but I/O-bound tasks can benefit from
+threading.
 Why Use Multithreading?
 Multithreading is useful for:
 
@@ -67,15 +68,19 @@ thread.join() : Waits for the thread to finish execution.
 threading.active_count() : Returns the number of active threads.
 threading.current_thread() : Returns the current thread object.
 Global Interpreter Lock (GIL)
-In CPython (the default Python implementation), the GIL prevents multiple native threads from executing Python bytecodes simultaneously. This means that CPU-bound tasks (tasks that require heavy computation) may not see much improvement from multithreading. For CPU-bound tasks, multiprocessing (using multiple processes instead of threads) is often preferred.
+In CPython (the default Python implementation), the GIL prevents multiple native threads from executing 
+Python bytecodes simultaneously. This means that CPU-bound tasks (tasks that require heavy computation) may not see much improvement from multithreading. 
+For CPU-bound tasks, multiprocessing (using multiple processes instead of threads) is often preferred.
 
 When to Use Multithreading:
 I/O-bound tasks (e.g., file I/O, network I/O): Multithreading can improve performance significantly.
 Non-blocking operations: For tasks where you can allow the system to switch between threads without waiting for one to finish.
 Limitations:
 GIL: As mentioned, CPU-bound tasks might not benefit as much from multithreading due to the GIL.
-Race conditions: Multiple threads accessing shared resources may cause unexpected behavior if proper locking mechanisms are not used (e.g., using threading.Lock).
-For CPU-bound tasks, using the multiprocessing module (which uses separate processes rather than threads) is usually a better option
+Race conditions: Multiple threads accessing shared resources may cause unexpected behavior if 
+proper locking mechanisms are not used (e.g., using threading.Lock).
+For CPU-bound tasks, using the multiprocessing module (which uses separate processes rather
+than threads) is usually a better option
 
 '''
 
@@ -119,7 +124,7 @@ thread1.setDaemon(True) #background run
 thread1.start()
 thread2.start()
 l= enumerate()
-print(l)
+print("l is",l)
 for t in l:
     print("t.name is",t.name, thread1.is_alive(), thread2.is_alive())
 # Wait for both threads to complete
@@ -127,9 +132,9 @@ thread1.join()
 thread2.join() #if thread wants wait util before thread executed
 print("thread1", current_thread().ident)
 l= enumerate()
-print(l)
+print("l is",l)
 for t in l:
-    print(t.name, thread1.is_alive())
+    print("t.name is",t.name, thread1.is_alive())
     
 print("thread1.daemon",thread1.isDaemon())    
 #print("Threads have finished execution")

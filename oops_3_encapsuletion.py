@@ -1,6 +1,15 @@
+
+
+#property decorter used for, we can call for method without this"()""
 '''bundling of data and methods that operate on that data within a single
 unit (class).
 
+ Encapsulation: bundling of data and methods that operate on that data within a single
+ unit (class).􏰀
+
+Encapsulation is about controlling access to an object’s internal state by using 
+public, private, or protected access modifiers, ensuring that the data is not 
+directly exposed.
 
 You can use a private attribute within the class method.true
 
@@ -86,3 +95,44 @@ my_book.describe_book()
 
 # Using the class method to display information about the series
 Book.books_in_series("Harry Potter", 7)
+
+class Student:
+  def __init__(self, name, grade):
+    self.name=name
+    self.grade= grade
+    #self.msg= self.name+' got the grade'+self.grade
+  @property  
+  def msg(self):
+    return self.name+' got the grade '+self.grade 
+  @msg.setter
+  def msg(self, msg):
+    msg= msg.split()
+    self.name= msg[0]
+    self.grade= msg[-1]
+     
+    
+student1=Student('srini','B')
+student1.grade='A'
+print(student1.grade)
+#print(student1.msg)  
+student1.msg= "srivas get grade O"
+print(student1.msg)  
+
+class ZPStudent:
+  def __init__(self, marks):
+    self.__marks= marks
+  def per(self):
+    return (self.__marks/600)*100  
+  @property
+  def marks(self):
+    print('gettings the marks')
+    return self.__marks
+  @marks.setter
+  def marks(self, value):
+    print("settings the value")
+    self.__marks= value
+    
+    
+student2=ZPStudent(400) 
+student2.marks=500
+print(student2.per())   
